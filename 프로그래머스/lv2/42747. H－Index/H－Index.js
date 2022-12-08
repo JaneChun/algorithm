@@ -2,9 +2,9 @@ function solution (citations) {      // citations = [3, 0, 6, 1, 5]
     citations.sort((a, b) => b - a); // 내림차순으로 정렬 [6, 5, 3, 1, 0]
                                     
     
-    for (let i = 0; i < citations.length; i++) { // i = 0, 1, 2, 3, 4
+    for (let i = 0; i < citations.length; ++i) { // i = 0, 1, 2, 3, 4
         let hIndex = citations[i];          // hIndex = 6, 5, 3, 1, 0
-        if (i + 1 >= hIndex) {               // i + 1 = 1, 2, 3, 4, 5
+        if (i + 1 > hIndex) {               // i + 1 = 1, 2, 3, 4, 5
             return i;
         }
         
