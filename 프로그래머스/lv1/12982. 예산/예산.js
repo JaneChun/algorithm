@@ -5,7 +5,7 @@ function solution(d, budget) {
         budget -= d[i];
         count++;
         if (budget === 0) {
-            return count;
+            break;
         } else if (budget < 0) {
             return count - 1;
         } 
