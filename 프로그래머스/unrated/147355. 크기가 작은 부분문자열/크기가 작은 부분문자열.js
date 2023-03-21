@@ -1,7 +1,7 @@
 function solution(t, p) {
-    const arr = [];
-    for (let i = 0; i < t.length - p.length + 1; i ++) {
-        arr.push(t.slice(i, i + p.length));
+    let count = 0;
+    for (let i = 0; i <= t.length - p.length; i ++) {
+        if (t.slice(i, i + p.length) <= p) count++;
     }
-    return arr.filter((v) => +v <= +p).length;
+    return count;
 }
