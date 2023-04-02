@@ -1,14 +1,6 @@
-function solution(s) {
-    const result = [];
-    const memo = [];
-    for (let i = 0; i < s.length; i++) {
-        if (!memo.includes(s[i])) {
-            memo.push(s[i]);
-            result.push(-1);
-        } else {
-            const idx = s.slice(0, i).lastIndexOf(s[i]);
-            result.push((i - idx));
-        }
-    }
-    return result;
+function solution(s) { // ['b', 'a', 'n', 'a', 'n', 'a']
+    return s.split('').map((v, i, arr) => {
+        const idx = arr.slice(0, i).lastIndexOf(v);
+        return idx === -1 ? -1 : i - idx;
+    })
 }
