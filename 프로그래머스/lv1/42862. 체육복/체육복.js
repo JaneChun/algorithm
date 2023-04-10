@@ -1,28 +1,20 @@
 function solution(n, lost, reserve) {
-    const reserveSelf = reserve.filter((v) => !lost.includes(v)).sort((a, b) => a - b);
-    const selfArr = lost.filter((v) => !reserve.includes(v)).sort((a, b) => a - b);
+    const filteredReserve =  reserve.filter((v) => !lost.includes(v)).sort((a, b) => a - b);
+    const filteredLost = lost.filter((v) => !reserve.includes(v)).sort((a, b) => a - b);
     
-    return n - selfArr.map((v) => {
-        // const borrowFromSelf = reserve.indexOf(v);
-        const borrowFromFront = reserveSelf.indexOf(v - 1);
-        const borrowFromBack = reserveSelf.indexOf(v + 1);
+    return n - filteredLost.map((v) => {
+        const borrowFromFront = filteredReserve.indexOf(v - 1);
+        const borrowFromBack = filteredReserve.indexOf(v + 1);
         
-        // if (borrowFromSelf !== -1) {
-        //     reserve.splice(borrowFromSelf, 1);
-        //     console.log(reserve);
-        //     return null;
-        // } else 
-            if (borrowFromFront !== -1) {
-            reserveSelf.splice(borrowFromFront, 1);
-            console.log(reserveSelf);
+        if (borrowFromFront !== -1) {
+            filteredReserve.splice(borrowFromFront, 1);
             return null;
         } else if (borrowFromBack !== -1) {
-            reserveSelf.splice(borrowFromBack, 1);
-            console.log(reserveSelf);
+            filteredReserve.splice(borrowFromBack, 1);
             return null;
         } else {
             return v;    
         }
         
-    }).filter((v) => v).length
+    }).filter((v) => v).length;
 }
