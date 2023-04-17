@@ -5,7 +5,7 @@ function solution(babbling) {
         const regex = /(aya|ye|woo|ma)/g;
         const matches = string.match(regex); // ['aya', 'ye']
         
-        if (!matches)  return;
+        if (!matches)  return; // 
         
         let prev = ''
         matches.forEach((match) => { // 'aya'
