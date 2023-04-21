@@ -1,15 +1,17 @@
 function solution(survey, choices) {
-    const hash = {};
-    const types = ['RT', 'CF', 'JM', 'AN'];
+    const hash = {R: 0, T: 0, C: 0, F: 0, J: 0, M: 0, A: 0, N: 0};
     
-    types.forEach((type) => type.split('').forEach((char) => hash[char] = 0));
+    survey.forEach(([disagree, agree], i) => {
+        const num = choices[i];
+        
+        if (num === 4) return false;
+        else if (num < 4) hash[disagree] += Math.abs(num - 4);
+        else hash[agree] += Math.abs(num - 4);
+    })
     
-    choices.forEach((choice, i) => {
-        const [disagree, agree] = survey[i];
-        hash[choice < 4 ? disagree : agree] += Math.abs(4 - choice);
-    });
-    
-    // hash = {'R': 6, 'T': 1 ...}
-    // type = 'RT'
-    return types.map(([a, b]) => hash[a] >= hash[b] ? a : b).join('');
+    return ['RT', 'CF', 'JM', 'AN'].map((typePair) => findBigger(typePair, hash)).join('');
+}
+
+function findBigger([type1, type2], hash) {
+    return hash[type1] < hash[type2] ? type2 : type1;
 }
