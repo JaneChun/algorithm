@@ -8,11 +8,12 @@ function solution(k, tangerine) {
     })
     
     const sortedArr = [...map].sort((a, b) => b[1] - a[1]);
+    console.log(sortedArr)
     
     for (const [size, quantity] of sortedArr) {
-        if (k <= 0) break;
-        k -= quantity;
-        result++;
+        if (k <= 0) break; // 0
+        k -= quantity; // 0
+        result++; // 상자 1개에 3종류
     }
     
     return result;
