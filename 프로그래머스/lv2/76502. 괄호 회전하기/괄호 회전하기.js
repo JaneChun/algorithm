@@ -7,7 +7,6 @@ function solution(s) {
         const stack = [];
         
         if (!pair[s[0]]) { // 첫번째부터 닫는 괄호라면 얼리 리턴
-            console.log('얼리 리턴', pair[s[0]])
             s = s.substr(1) + s[0];
             continue;
         }; 
@@ -23,6 +22,7 @@ function solution(s) {
                 stack.pop(); // pop해준다.
                 continue;
             }
+            console.log(stack)
         }
         
         if (stack.length === 0) count++; // 올바른 괄호라면 카운트 + 1
