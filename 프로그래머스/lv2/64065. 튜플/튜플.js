@@ -1,5 +1,5 @@
 function solution(s) {
-    const result = [];
+    const result = [];// 3 2 4 1
     const tuples = s.slice(2, -2).split('}\,{')
                               .sort((a, b) => a.length - b.length);
     
