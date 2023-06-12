@@ -45,13 +45,13 @@ class LinkedList {
     }
     
     insert(value) {
-        const newNode = new Node(value);
-        if (this.head === null) {
+        const newNode = new Node(value); // 새로운 노드 생성 newNode = {value:'Jeju', next: null}
+        if (this.head === null) { // 연결리스트가 아예 비어있는 경우
             this.head = newNode;
             this.tail = newNode;
         } else {
-            this.tail.next = newNode;
-            this.tail = newNode;
+            this.tail.next = newNode; // 연결리스트 마지막에 새로운 노드를 연결해준다.
+            this.tail = newNode; // 'a' - 'b' - 'c' - 'jeju'
         }
         this.size++;
         
@@ -62,7 +62,7 @@ class LinkedList {
         }
     }
     
-    remove(value) {
+    remove(value) { // 'a' - 'b' - 'c' - 'd'
         let currentNode = this.head; // head부터 시작
         let prevNode = null;
         while (currentNode !== null) { // currentNode가 null이 될때까지 (연결리스트를 끝까지 순회)
