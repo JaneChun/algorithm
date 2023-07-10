@@ -11,8 +11,8 @@ function solution(number, k) {
         stack.push(n);        
     }
     
-    while (count < k) { // 지운 숫가 개수 < k
-        stack.pop(); // 뒤에서부터 삭제
+    while (count < k) {
+        stack.pop();
         count++;
     }
     
