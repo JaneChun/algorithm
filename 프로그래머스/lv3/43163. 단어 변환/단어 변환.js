@@ -15,7 +15,7 @@ function solution(begin, target, words) {
             if (!visited[i] && isChangable(begin, word)) {
                 visited[i] = true;
                 depth += 1;
-                dfs(word, target, depth);
+                dfs(word, target, depth); 
                 visited[i] = false;
                 depth -= 1;
             }    
