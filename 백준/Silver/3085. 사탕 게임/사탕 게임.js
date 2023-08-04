@@ -14,18 +14,18 @@ for (let i = 1; i <= n; i++) {
 for (let i = 0; i < n; i++) {
 	for (let j = 0; j < n - 1; j++) {
 		[candies[i][j], candies[i][j + 1]] = [candies[i][j + 1], candies[i][j]];
-		const count = checkConnection(candies, 'row');
+		const count = checkConnection(candies);
 		maxConnection = Math.max(maxConnection, count);
-		[candies[i][j], candies[i][j + 1]] = [candies[i][j + 1], candies[i][j]]; // 원상복귀
+		[candies[i][j], candies[i][j + 1]] = [candies[i][j + 1], candies[i][j]];
 	}
 }
 
 for (let i = 0; i < n - 1; i++) {
 	for (let j = 0; j < n; j++) {
 		[candies[i][j], candies[i + 1][j]] = [candies[i + 1][j], candies[i][j]];
-		const count = checkConnection(candies, 'column');
+		const count = checkConnection(candies);
 		maxConnection = Math.max(maxConnection, count);
-		[candies[i][j], candies[i + 1][j]] = [candies[i + 1][j], candies[i][j]]; // 원상복귀
+		[candies[i][j], candies[i + 1][j]] = [candies[i + 1][j], candies[i][j]];
 	}
 }
 
