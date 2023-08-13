@@ -8,12 +8,11 @@ const answer = [];
 for (const N of arr) {
 	let count = 0;
 	const dfs = (target, sum) => {
-		if (sum === target) count++;
-		if (sum < target) {
-			dfs(target, sum + 1);
-			dfs(target, sum + 2);
-			dfs(target, sum + 3);
-		}
+		if (sum === target) return count++;
+        if (sum > target) return;
+        dfs(target, sum + 1);
+        dfs(target, sum + 2);
+        dfs(target, sum + 3);
 	};
 
 	dfs(N, 0);
