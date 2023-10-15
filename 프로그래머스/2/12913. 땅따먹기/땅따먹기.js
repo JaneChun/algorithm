@@ -6,5 +6,6 @@ function solution(land) {
             land[i][j] += Math.max(...prevLand)
         }
     }
+    console.log(land)
     return Math.max(...land.pop())
 }
