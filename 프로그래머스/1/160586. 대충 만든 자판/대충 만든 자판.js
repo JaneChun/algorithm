@@ -14,7 +14,6 @@ function solution(keymap, targets) {
         
         for (const key of target) { // key = 'A'
            count += hash[key];
-           console.log(hash[key])
         }
         answer.push(count || -1);
     }
