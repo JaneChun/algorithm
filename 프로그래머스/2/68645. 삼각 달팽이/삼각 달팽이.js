@@ -18,7 +18,7 @@ function solution(n) {
     
     for (let i = n; i > 0; i--) { // n번, n-1번, n-2번 ...
         const [dx, dy] = directions[directionIdx]
-        for (let j = 0; j < i; j++) {
+        for (let j = 0; j < i; j++) { // 4번
             x += dx
             y += dy
             arr[x][y] = value
