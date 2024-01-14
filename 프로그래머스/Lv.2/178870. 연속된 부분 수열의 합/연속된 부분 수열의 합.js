@@ -2,9 +2,9 @@ function solution(sequence, k) {
     const answer = []
     let left = 0
     let right = 0
-    let sum = sequence[0]
-    
-    while (right < sequence.length) {
+    let sum = sequence[0]             // sum 3 + 4 = 7
+                                      //                    l  r
+    while (right < sequence.length) { // sequence = [ 1, 2, 3, 4, 5]
         if (sum < k) {
             right++
             sum += sequence[right]
