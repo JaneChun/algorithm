@@ -15,7 +15,7 @@ function solution(maps) {
             if (maps[x][y] !== 'X') result.push(dfs(x, y))
         }
     }
-    
+
     
     return result.length ? result.sort((a, b) => a - b) : [-1]
 }
