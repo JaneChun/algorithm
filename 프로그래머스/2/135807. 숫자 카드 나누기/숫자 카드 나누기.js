@@ -1,9 +1,9 @@
 function solution(arrayA, arrayB) {
     const answer =  []
     
-    const gcdOfArrayA = arrayA.reduce((acc, cur) => gcd(acc, cur));
-    const gcdOfArrayB = arrayB.reduce((acc, cur) => gcd(acc, cur));
-    
+    const gcdOfArrayA = arrayA.reduce((acc, cur) => gcd(acc, cur)); // 1
+    const gcdOfArrayB = arrayB.reduce((acc, cur) => gcd(acc, cur)); // 5
+
     if(arrayA.every((v) => v % gcdOfArrayB !== 0)) answer.push(gcdOfArrayB)
     if(arrayB.every((v) => v % gcdOfArrayA !== 0)) answer.push(gcdOfArrayA)
     
