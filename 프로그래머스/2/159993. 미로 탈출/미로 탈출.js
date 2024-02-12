@@ -21,6 +21,7 @@ function bfs (from, to, maps) {
             }
         }
     }
+    // queue = [[0,4,0]]
 
     // 도착 지점까지의 거리 구하기
     while (queue.length) {
