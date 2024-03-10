@@ -2,7 +2,6 @@ function solution(N, road, K) {
     // 인접 리스트를 그래프로 만든다.
     const graph = Array.from(Array(N + 1), (_, i) => [[i, 0]]) // 자기 자신으로 가는 시간은 0으로 초기화
     
-    // 최소시간 저장
     for (const [from, to, time] of road) {
         graph[from].push([to, time])
         graph[to].push([from, time])
