@@ -40,15 +40,14 @@ function solution(friends, gifts) {
         Object.entries(receiversObj).forEach(([receiver, giveCount]) => {
             const receiveCount = giftMap[receiver][giver]
             if (giveCount > receiveCount) nextMonth[giver]++
-            else if (giveCount < receiveCount) nextMonth[receiver]++
-            else {
+            // else if (giveCount < receiveCount) nextMonth[receiver]++
+            else if (giveCount === receiveCount) {
                 // 선물 지수 높은 사람++
                 if (giftIndex[giver] > giftIndex[receiver]) nextMonth[giver]++
-                else if (giftIndex[giver] < giftIndex[receiver]) nextMonth[receiver]++
-                else return
+                // else if (giftIndex[giver] < giftIndex[receiver]) nextMonth[receiver]++
             }
         })
     })
-    
-    return Math.max(...Object.values(nextMonth))/2
+    console.log(nextMonth)
+    return Math.max(...Object.values(nextMonth))
 } 
