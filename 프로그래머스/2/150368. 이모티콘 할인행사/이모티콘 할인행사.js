@@ -1,5 +1,5 @@
 function solution(users, emoticons) {
-    const result = { register: -Infinity, cost: -Infinity}
+    const result = { register: -Infinity, cost: -Infinity }
     const discounts = [10, 20, 30, 40]
     
     users = users.map(([discountRate, maxCost]) => ({discountRate, maxCost}))
