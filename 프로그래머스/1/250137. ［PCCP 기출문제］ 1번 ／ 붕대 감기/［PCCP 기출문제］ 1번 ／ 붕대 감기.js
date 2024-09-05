@@ -29,6 +29,7 @@ function solution(bandage, health, attacks) {
                 if (currentHealth > health) currentHealth = health
             }
         }
+        console.log('time', time, 'currentHealth', currentHealth)
     }
     return currentHealth > 0 ? currentHealth : -1
 }
@@ -40,3 +41,4 @@ function solution(bandage, health, attacks) {
 // 공격 당하면 취소
 // 0초로 초기화
 
+solution([5, 1, 5], 30, [[2, 5], [9, 5], [10, 5], [11, 5]])
