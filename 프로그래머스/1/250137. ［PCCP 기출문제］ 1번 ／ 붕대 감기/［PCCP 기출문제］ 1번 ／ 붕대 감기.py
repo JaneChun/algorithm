@@ -3,7 +3,6 @@ def solution(bandage, health, attacks):
     heal_time = 0    
     max_health = health
     last_attack_time = attacks[-1][0]
-    print(last_attack_time)
     
     for time in range(0, last_attack_time + 1):
         [attackTime, damage] = attacks[0]
@@ -14,7 +13,6 @@ def solution(bandage, health, attacks):
             heal_time = 0
             if health <= 0: # 사망
                 return -1
-            print(time, health)
             continue
     
         health += x
