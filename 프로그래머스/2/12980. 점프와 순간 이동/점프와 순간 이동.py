@@ -6,7 +6,8 @@ def solution(n):
             n /= 2
             continue
         else:
-            battery += n % 2
-            n = n // 2
+            k = n % 2
+            battery += k
+            n -= k
 
     return battery
