@@ -4,7 +4,7 @@ def isRightBracketString(s):
     for bracket in s:
         if bracket in ['[', '{', '(']:
             stack.append(bracket)
-        elif bracket in [']', '}', ')']:
+        else:
             if not stack:
                 return False
             
@@ -13,8 +13,8 @@ def isRightBracketString(s):
                (top == '{' and bracket == '}') or \
                (top == '(' and bracket == ')'):
                 stack.pop() 
-        else:
-            return False
+            else:
+                return False
     return len(stack) == 0
 
 def solution (s):
