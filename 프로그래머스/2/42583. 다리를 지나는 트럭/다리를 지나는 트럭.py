@@ -10,14 +10,14 @@ def solution(bridge_length, weight, truck_weights):
     while truck_weights or cur_bridge_weight > 0:
         time += 1
 
-        # 다리에서 트럭이 나감
-        cur_bridge_weight -= bridge.popleft()
+        # 트럭 나감 & 다리에서 트럭이 나감 (현재 다리 무게 계산)
+        cur_bridge_weight -= bridge[0]
         
         # 다리에 새로운 트럭이 오를 수 있는지 확인
         if truck_weights and cur_bridge_weight + truck_weights[0] <= weight:
             cur_truck = truck_weights.pop(0)
-            bridge.append(cur_truck)
-            cur_bridge_weight += cur_truck
+            bridge.append(cur_truck) # 트럭 올라옴
+            cur_bridge_weight += cur_truck # (다리 무게 계산)
         else:
             bridge.append(0)
     
