@@ -2,7 +2,7 @@ def solution(n, wires):
     answer = float('inf')  # 최소값을 구해야 하므로 초기값을 큰 값으로 설정
     
     # 인접 리스트 생성
-    graph = {i: [] for i in range(1, n + 1)}
+    graph = {i: [] for i in range(1, n + 1)} # { 1: [], 2: [], ...}
     for v1, v2 in wires:
         graph[v1].append(v2)
         graph[v2].append(v1)
@@ -38,6 +38,7 @@ def bfs(start, graph):
     while queue:
         cur = queue.pop(0) # 큐에서 현재 노드 꺼내고
         count += 1 # 방문한 노드 개수 증가
+        visited[cur] = True
         
         # 현재 노드와 연결된 노드들 큐에 추가
         for neighbor in graph[cur]:
