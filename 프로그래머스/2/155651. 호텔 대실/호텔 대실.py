@@ -11,7 +11,7 @@ def solution(book_time):
         else:
             rooms.append(end)
         rooms.sort()
-        
+    
     return len(rooms)
 
 def convert_to_min(book_time):
