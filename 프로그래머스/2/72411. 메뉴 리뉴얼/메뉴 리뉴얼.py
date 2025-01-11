@@ -1,6 +1,6 @@
 def solution(orders, course):
     answer = []
-    combo_count = dict()
+    combo_count = dict() # {2: {'AB':1, ...}, 3: {...}}
     
     for length in course:
         combo_count[length] = dict()
