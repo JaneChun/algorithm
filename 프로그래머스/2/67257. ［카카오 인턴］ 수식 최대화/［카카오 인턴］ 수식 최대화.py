@@ -31,5 +31,5 @@ def solution(expression): # 연산자(+,-,*)의 우선순위를 재정의하여 
         
         [acc_calculated] = tokens
         answer.append(abs(int(acc_calculated)))
-        
+
     return max(answer)
