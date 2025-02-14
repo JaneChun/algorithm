@@ -1,10 +1,10 @@
 # [level 2] 하노이의 탑 - 12946 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12946) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12946?language=python3) 
 
 ### 성능 요약
 
-메모리: 48.4 MB, 시간: 5.03 ms
+메모리: 18.7 MB, 시간: 9.09 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 2월 0일 21:5:34
+2025년 02월 15일 01:36:10
 
 ### 문제 설명
 
