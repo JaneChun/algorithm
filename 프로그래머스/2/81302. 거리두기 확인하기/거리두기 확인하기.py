@@ -27,7 +27,7 @@ def is_someone_around(place, start):
     while queue:
         (y, x), dis = queue.pop(0)
         
-        if 1<= dis <= 2 and place[y][x] == 'P':
+        if 1 <= dis <= 2 and place[y][x] == 'P':
             return True
         
         for dy, dx in [[-1, 0], [1, 0], [0, -1], [0, 1]]:
