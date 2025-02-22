@@ -1,7 +1,7 @@
 def solution(board):
     # 첫 번째 열, 첫 번째 행은 그대로 복사
     # 오른쪽 아래 = min(왼쪽 위, 위, 왼쪽)
-    # 점화식: dp[i][j] = min(board[i - 1][j - 1], board[i - 1][j], board[i][j])
+    # 점화식: dp[i][j] = min(board[i - 1][j - 1], board[i - 1][j], board[i][j]) + 1
     
     row = len(board)
     col = len(board[0])
