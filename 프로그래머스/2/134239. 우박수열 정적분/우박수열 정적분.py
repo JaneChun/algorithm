@@ -29,8 +29,8 @@ def solution(k, ranges):
     # 정적분 결과 계산
     answer = []
     n = len(collatz) - 1 # 총 구간은 5개
-    for a, b in ranges:
-        end = n + b 
+    for a, b in ranges: # 0, 0
+        end = n + b # 5 -> 0 ~ 5
         if a > end: # 시작점이 끝점보다 커서 유효하지 않은 구간인 경우
             answer.append(-1)
         else:
