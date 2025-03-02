@@ -1,10 +1,10 @@
-import math
+# import math
 
-# 시간초과
+# # 시간초과
 # def solution(k, d):
 #     answer = 0
     
-#     for x in range(0, d + 1, k):
+#     for x in range(0, d + 1, k): # 0 2 4
 #         maxY = math.sqrt(d*d - x*x) # x별로 최고 y 높이 계산
 
 #         for y in range(0, int(maxY) + 1, k):
