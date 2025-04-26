@@ -1,7 +1,7 @@
 def solution(points, routes):
     answer = 0
     
-    time_dict = {}
+    time_dict = {} # {(시간, 행, 열): 0}
 
     for route in routes:
         time = 0
@@ -31,7 +31,7 @@ def solution(points, routes):
                 time += 1
 
                 time_dict[(time, src_r, src_c)] = time_dict.get((time, src_r, src_c), 0) + 1
-                
+
     for value in time_dict.values():
         if value > 1:
             answer += 1
