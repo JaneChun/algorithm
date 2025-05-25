@@ -37,4 +37,4 @@ def solution(n, l, r): # 2, 4, 17
         return total
 
     # 1-based -> 0-based로 처리
-    return count_ones(n, l - 1, r - 1, 0, 5 ** n - 1)
+    return count_ones(n, l - 1, r - 1, 0, 5 ** n)
