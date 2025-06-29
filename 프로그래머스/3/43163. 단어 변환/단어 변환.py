@@ -1,6 +1,4 @@
 def solution(begin, target, words):
-    answer = 0
-    
     queue = [(begin, 0)]
     visited = [False] * len(words)
     
@@ -13,9 +11,9 @@ def solution(begin, target, words):
             if one_letter_different(cur, words[i]) and not visited[i]:
                 queue.append((words[i], cnt + 1))
                 visited[i] = True
+                
+    return 0
         
-    return answer
-
 def one_letter_different(a, b):
     count = 0
     for i in range(len(a)):
