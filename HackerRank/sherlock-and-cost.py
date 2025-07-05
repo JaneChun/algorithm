@@ -22,8 +22,8 @@ def cost(B):
     dp_low = [0] * n # max_sum when A[i] is 1
     dp_high = [0] * n # max_sum when A[i] is B[i]
     
-    # A[i] should be high[i] if A[i - 1] was 1
-    # A[i] should be 1       if A[i - 1] was high[i - 1]
+    # A[i] should be B[i] if A[i - 1] was 1
+    # A[i] should be 1    if A[i - 1] was B[i - 1]
     
     for i in range(1, n):
         # 1: A[i] = 1
