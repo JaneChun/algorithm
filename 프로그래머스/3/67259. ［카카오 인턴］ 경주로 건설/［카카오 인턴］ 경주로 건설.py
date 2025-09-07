@@ -24,7 +24,7 @@ def solution(board):
         for nd, (dy, dx) in directions.items():
             ny = y + dy
             nx = x + dx
-            nc = c + (100 if nd == d else 600) # 같은방향(직선도로)면 100, 아니면 500
+            nc = c + (100 if nd == d else 600) # 같은방향(직선도로)면 100, 아니면 600
             
             if (0 <= nx < N and 
                 0 <= ny < N and 
