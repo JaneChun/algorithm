@@ -1,7 +1,5 @@
-from collections import defaultdict
-
 def solution(enroll, referral, seller, amount):
-    profit_dict = defaultdict(int) # { 구성원: 이익 }
+    profit_dict = {e: 0 for e in enroll} # { 구성원: 이익 }
     ref_dict = {} # { 구성원: 추천인 }
     
     for e, r in zip(enroll, referral):
@@ -18,4 +16,4 @@ def solution(enroll, referral, seller, amount):
             me = ref_dict[me]
             profit = commission
     
-    return [profit_dict[name] for name in enroll]
+    return list(profit_dict.values())
