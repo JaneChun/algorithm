@@ -13,8 +13,6 @@ def solution(n, t, m, timetable):
         crew_time.append(int(hh) * 60 + int(mm))
     
     crew_time.sort()
-    # print(crew_time)
-    # [480, 549, 550]
         
     # 셔틀 출발 시간
     schedule = []
@@ -23,8 +21,6 @@ def solution(n, t, m, timetable):
     for i in range(1, n + 1):
         schedule.append(cur)
         cur += t
-    # print(schedule)
-    # [540, 550]
     
     # crew_time 배열에서 bus_time보다 작거나 같은 사람들을 최대 m명만큼 태울 수 있음
     for index, bus_time in enumerate(schedule):
@@ -32,7 +28,6 @@ def solution(n, t, m, timetable):
         while capacity > 0 and crew_time and crew_time[0] <= bus_time:
             onboarding_crew = crew_time.pop(0)
             capacity -= 1
-            # print(index + 1, '번째 버스', onboarding_crew, '탑승')
             
             # 만약 현재 버스가 마지막 버스이고, capacity가 1이라면, onboarding_crew보다 1분 빨리 와서 타야함
             if index == len(schedule) - 1 and capacity == 0:
