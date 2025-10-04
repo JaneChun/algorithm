@@ -6,6 +6,6 @@ def solution(n, money):
         
         for i in range(n + 1):
             if i - m > 0 :
-                dp[i] = (dp[i] + dp[i - m]) % 1000000007
+                dp[i] = (dp[i] + dp[i - m])
     
     return dp[n]
