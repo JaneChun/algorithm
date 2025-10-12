@@ -62,7 +62,7 @@ def solution(scores):
             max_peer = peer
             
     # 순위 계산을 위해 총점 기준 정렬
-    candidates.sort(key = lambda x: -x['total'])
+    candidates.sort(key = lambda x: -x['total']) # O(N log N)
     
     rank = 0
     prev_score = None
