@@ -14,10 +14,10 @@ def dijkstra(n, graph, s):
         # 방문한 적 없거나 더 짧은 거리라면 갱신하고 -> 이어서 연결된 노드 탐색
         distances[node] = dist
         
-        for next_node in range(1, n + 1):
-            next_dist = graph[node][next_node]
+        for i in range(1, n + 1):
+            next_dist = graph[node][i]
             if next_dist != 0:
-                heapq.heappush(q, (dist + next_dist, next_node)) # 거리 합산
+                heapq.heappush(q, (dist + next_dist, i)) # 거리 합산
     
     return distances
 
