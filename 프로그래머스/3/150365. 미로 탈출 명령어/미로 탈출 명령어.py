@@ -3,7 +3,7 @@
 # 이동하는 거리가 총 k
 # 사전 순으로 빠른 경로로 탈출
 
-def solution(n, m, x, y, r, c, k): # 2, 3 -> 3, 1
+def solution(n, m, x, y, r, c, k):
     answer = ''
     
     dist = abs(x - r) + abs(y - c)
