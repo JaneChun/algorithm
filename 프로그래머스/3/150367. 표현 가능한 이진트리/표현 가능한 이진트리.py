@@ -34,7 +34,7 @@
 # 체크해야할 조건
 # 1. 2진수로 변환한 길이가 2^n - 1인지
 #   1-1. 아닌 경우 0으로 패딩
-# 2. 트리가 유효한지 (부모가 0인데 자식이 있는 경우) = 즉, 0인 노드는 리프 노드여야함
+# 2. 트리가 유효한지 (부모가 0인데 자식이 있는 경우)
 
 def int_to_binary(integer):
     return bin(integer)[2:]
@@ -86,7 +86,7 @@ def has_one(binary, start, end):
     
 def solution(numbers):
     answer = []
-    
+
     for number in numbers:
         if number == 0: # 0 예외처리
             answer.append(0)
