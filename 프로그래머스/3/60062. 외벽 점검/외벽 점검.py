@@ -23,7 +23,7 @@ def solution(n, weak, dist):
             cur_idx = i # 현재 취약점 인덱스 (초기값이므로 첫 시작점)
             end_idx = i + weak_len - 1 # 마지막 취약점 인덱스
             
-            for friend in perm:
+            for friend in perm: # 4
                 sent_cnt += 1
                 start_point = weak[cur_idx] # 현재 친구의 시작점
                 end_point = start_point + friend # 현재 친구가 커버할 수 있는 최대 거리
