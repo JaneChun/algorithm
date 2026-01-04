@@ -1,5 +1,5 @@
 # 싱글로 얻을 수 있는 점수 : 1 ~ 20
-# 더블 : 2 ~ 40
+# 더블 : 2,4 ..~ 40
 # 트리플 : 3 ~ 60
 # 불 : 50
 def solution(target):
@@ -18,7 +18,9 @@ def solution(target):
     # 불
     scores.append((50, 1))
     
-    # dp[i] = (dart_cnt, singbull_cnt) 
+    print(scores)
+    
+    # dp[i] = (dart_cnt, singbull_cnt)
     # i 점수를 받을 수 있는 경우 중 최소한의 다트를 사용하고 싱글/불 횟수가 최대가 되는 경우
     dp = [(float('inf'), 0) for _ in range(target + 1)]
     dp[0] = (0, 0)
