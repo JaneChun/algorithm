@@ -80,7 +80,7 @@ def solution(commands):
                 update(int(r), int(c), val)
             else:
                 _, from_val, to_val = parts
-                table = replace(from_val, to_val)
+                replace(from_val, to_val)
         elif cmd == 'MERGE':
             _, r1, c1, r2, c2 = command.split(' ')
             
