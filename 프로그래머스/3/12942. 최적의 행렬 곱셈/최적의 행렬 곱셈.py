@@ -1,6 +1,6 @@
 def solution(matrix_sizes):
     n = len(matrix_sizes)
-    # i번째 행렬부터 j번째 행렬까지 곱하는 데 필요한 최소 연산횟수
+    # dp[i][j] = i번째 행렬부터 j번째 행렬까지 곱하는 데 필요한 최소 연산횟수
     dp = [[float('inf') for j in range(n)] for i in range(n)]
     
     for i in range(n):
