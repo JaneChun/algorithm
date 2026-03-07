@@ -1,17 +1,22 @@
-n = int(input())
+import sys
 
+n = int(sys.stdin.readline())
 meetings = []
-for i in range(n):
-    a, b = map(int, input().split())
-    meetings.append((a, b))
 
-sort_meetings = sorted(meetings, key=lambda x: (x[1], x[0]))
+for _ in range(n):
+    start, end = map(int, sys.stdin.readline().split(" "))
+    meetings.append({"start": start, "end": end})
+
+# 끝나는 시간 기준 정렬 -> 회의시간 기준 정렬
+# 빨리 끝나야 그 뒤로 더 많은 회의를 할 수 있으므로
+meetings.sort(key=lambda x: (x["end"], x["start"]))
 
 count = 0
-time = 0
-for s, e in sort_meetings:
-  if time <= s:
-    count += 1
-    time = e
+cur = 0
+for meeting in meetings:
+    start, end = meeting["start"], meeting["end"]
+    if cur <= start:
+        count += 1
+        cur = end
 
 print(count)
