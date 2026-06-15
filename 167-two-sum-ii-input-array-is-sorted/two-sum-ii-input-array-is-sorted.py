@@ -11,17 +11,11 @@ class Solution:
         right = len(numbers) - 1
 
         while left < right:
-            print('left', left, 'right', right)
             sum = numbers[left] + numbers[right]
 
             if sum == target:
-                print('sum == target', sum)
                 return [left + 1, right + 1] # 1-based-index
             elif sum < target:
-                print('sum < target', sum)
-                print('left += 1')
                 left += 1
             else:
-                print('sum > target', sum)
-                print('right -= 1')
                 right -= 1
