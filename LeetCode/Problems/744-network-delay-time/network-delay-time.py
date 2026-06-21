@@ -11,9 +11,6 @@ class Solution:
         for source, target, time in times:
             graph[source][target] = time
 
-        print(graph)
-        # [{}, {}, {1: 1, 3: 1}, {4: 1}, {}]
-
         # distance = k로부터 모든 노드까지의 거리
         distance = [-1] * (n + 1) # 1-based
 
@@ -23,9 +20,7 @@ class Solution:
         distance[0] = 0
 
         while q:
-            print(q)
             cur, dist = heapq.heappop(q) # 가장 거리가 가까운 노드부터 탐색하도록 최소 힙 사용
-            print(cur, dist)
             
             for nxt, nxt_dist in graph[cur].items():
                 # if distance[nxt] == -1: # 첫 방문이 최소 거리이므로
@@ -39,5 +34,4 @@ class Solution:
                     heapq.heappush(q, (nxt, acc_dist))
                     distance[nxt] = acc_dist
 
-        print(distance)
         return -1 if -1 in distance else max(distance)
