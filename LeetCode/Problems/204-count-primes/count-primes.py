@@ -13,8 +13,6 @@ class Solution:
             if seive[i]: # 소수가 아니라면 다른 숫자를 나눌 필요가 없다.
                 # i로 나눠지는 모든 수를 지운다. e.g. i = 5라면 25, 30, 35 ... 를 지운다. (10, 15, 20은 이미 i = 2, i = 3에서 지워짐)
                 for j in range(i*i, n, i):
-                    if i == j: # 나 자신 제외
-                        continue
                     seive[j] = False
         
         primes = list(filter(lambda x: x == True, seive))
