@@ -4,11 +4,11 @@ class Solution:
         if len(nums) < 3:
             return False
 
-        first = nums[0] # 1
+        first = nums[0]
         second = float('inf')
 
         for i in range(1, len(nums)):
-            if nums[i] < first: # first 교체, second 초기화
+            if nums[i] < first: # first 교체
                 first = nums[i]
             elif first < nums[i] < second: # second를 교체
                 second = nums[i]
