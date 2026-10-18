@@ -1,3 +1,4 @@
+# n = 1,000 이므로 O(n^2) -> 1,000,000
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         max_length = 1
