@@ -12,12 +12,10 @@ class Solution:
             result = 0
             place_value = 1
 
-            while cur_node.next:
+            while cur_node:
                 result += cur_node.val * place_value
                 place_value *= 10
                 cur_node = cur_node.next
-            
-            result += cur_node.val * place_value # 마지막 노드 처리
             
             return result
         
