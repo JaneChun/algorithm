@@ -19,7 +19,7 @@ class Solution:
             # left 탐색
             if root.left:
                 found = inorder(root.left)
-                if found is not None:
+                if found is not None: 
                     return found
             
             # root 탐색
