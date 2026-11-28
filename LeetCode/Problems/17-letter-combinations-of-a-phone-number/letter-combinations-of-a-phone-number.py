@@ -27,3 +27,6 @@ class Solution:
 
         return result
         
+# 시간복잡도
+# digits의 길이 n, digit 하나당 최대 4개의 조합이므로
+# O(n * 4^n) 예를들어 n = 2인 경우 2자리 2 * (4*4) = 32
